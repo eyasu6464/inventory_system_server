@@ -23,9 +23,9 @@ type Employee struct {
 	gorm.Model
 	FirstName    string        `form:"first name" json:"first_name" gorm:"type:varchar(150)"`
 	LastName     string        `form:"last name" json:"last_name" gorm:"type:varchar(150)"`
-	Gender       GenderTypes   `form:"gender" json:"gender"`
-	EmployeeType EmployeeTypes `form:"employee role" json:"employee_role"`
-	StatusType   StatusTypes   `form:"status" json:"status"`
+	Gender       GenderTypes   `gorm:"type:Gender" form:"gender" json:"gender"`
+	EmployeeType EmployeeTypes `gorm:"type:EmployeeType" form:"employee role" json:"employee_role"`
+	StatusType   StatusTypes   `gorm:"type:StatusType" form:"status" json:"status"`
 	UserID       int
 	User         User
 }

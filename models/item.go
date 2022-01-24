@@ -13,6 +13,4 @@ type Item struct {
 	SubCategoryID uint      `json:"sub_category_id"`
 	Amount        uint      `json:"amount"`
 	Price         float32   `json:"price"`
-	//this if for storing which venders can supply this item
-	Venders []Vender `gorm:"many2many:item_venders;"`
 }
